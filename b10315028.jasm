@@ -1,0 +1,50 @@
+class proj3
+{
+    field static int n = 10
+	field static int sum = 0
+	field static int index
+	method public static void main(java.lang.String[])
+	max_stack 30
+	max_locals 30
+	{
+	L0: iconst_0
+		pop
+		sipush 0
+		putstatic int proj3.index
+		goto L1
+	L1:
+		getstatic int proj3.index
+		getstatic int proj3.n
+		isub
+		ifle L5
+		iconst_0
+		goto L6
+	L5:	iconst_1
+	L6:
+		ifeq L4
+		goto L3
+	L2:
+	iconst_0
+		pop
+		goto L1
+	L3:
+		getstatic int proj3.sum
+		getstatic int proj3.index
+		iadd
+		putstatic int proj3.sum
+		getstatic int proj3.index
+		sipush 1
+		iadd
+		putstatic int proj3.index
+		goto L2
+	L4:iconst_0
+		pop
+		getstatic java.io.PrintStream java.lang.System.out
+		ldc "The sum is " 
+		invokevirtual void java.io.PrintStream.print(java.lang.String)
+		getstatic java.io.PrintStream java.lang.System.out
+		getstatic int proj3.sum
+		invokevirtual void java.io.PrintStream.println(int)
+		return
+	}
+}

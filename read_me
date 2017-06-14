@@ -1,0 +1,6 @@
+read me
+
+.l檔更改
+多了return值到.y中儲存
+另外symbol table的function被搬到另一個.h檔中
+且刪除了main function避免跟.y的衝突
